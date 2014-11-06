@@ -1,0 +1,350 @@
+/*
+	site breakpoints in Pixels
+*/
+/*
+	Main fonts names
+*/
+/*
+	Main colors
+*/
+/*
+	Configuration
+*/
+/*
+	Base font size (try to keep at 16)
+*/
+/* CSS Document */
+.background-white {
+  background-color: #FFFFFF;
+}
+.background-black {
+  background-color: #000000;
+}
+.background-red {
+  background-color: #FF0004;
+}
+.background-orange {
+  background-color: #FFB600;
+}
+.background-yellow {
+  background-color: #FFFD00;
+}
+.background-green {
+  background-color: #1B7900;
+}
+.background-blue {
+  background-color: #0005FF;
+}
+.background-indigo {
+  background-color: #FF00F5;
+}
+.background-purple {
+  background-color: #7C0049;
+}
+/*Background colors*/
+.background-white {
+  background-color: #FFFFFF;
+}
+.black {
+  color: #000000;
+}
+.red {
+  color: #FF0004;
+}
+.orange {
+  color: #FFB600;
+}
+.yellow {
+  color: #FFFD00;
+}
+.green {
+  color: #1B7900;
+}
+.blue {
+  color: #0005FF;
+}
+.indigo {
+  color: #FF00F5;
+}
+.purple {
+  color: #7C0049;
+}
+/*
+        Margin, padding, and border resets
+        except for form elements
+*/
+body,
+div,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+th,
+td,
+article,
+aside,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+/*
+        Consistency fixes
+        adopted from http://necolas.github.com/normalize.css/
+*/
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section,
+audio,
+canvas,
+video {
+  display: block;
+}
+html {
+  height: 100%;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+body {
+  min-height: 100%;
+  font-size: 100%;
+}
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sup {
+  top: -0.5em;
+}
+sub {
+  bottom: -0.25em;
+}
+pre {
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+b,
+strong {
+  font-weight: bold;
+}
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+a img,
+img {
+  -ms-interpolation-mode: bicubic;
+  border: 0;
+}
+input,
+textarea,
+button,
+select {
+  margin: 0;
+  font-size: 100%;
+  line-height: normal;
+  vertical-align: baseline;
+}
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  cursor: pointer;
+  -webkit-appearance: button;
+}
+input[type="checkbox"],
+input[type="radio"] {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
+textarea {
+  overflow: auto;
+}
+/*
+        These are easy to forget
+*/
+::selection {
+  background: red;
+  color: white;
+}
+::-moz-selection {
+  background: red;
+  color: white;
+}
+img::selection {
+  background: transparent;
+}
+img::-moz-selection {
+  background: transparent;
+}
+body {
+  -webkit-tap-highlight-color: rgba(255, 0, 0, 0.62);
+}
+.hide {
+  display: none;
+}
+.show {
+  display: block;
+}
+.removeFloat {
+  clear: both;
+  height: 0;
+  font-size: 1px;
+  line-height: 0px;
+}
+/**
+	Mobile layout 
+	240-600 px
+**/
+@media screen and (min-width: 25em) {
+  /*
+	Mobile CSS
+*/
+  #leftColumn {
+    width: 25em;
+    display: block;
+  }
+  #centerColumn {
+    width: 25em;
+    display: none;
+  }
+  #rightColumn {
+    width: 25em;
+    display: block;
+  }
+}
+/*
+	Wide mobile layout 
+	480-767 px
+	Zoomed in above 480 px
+*/
+@media screen and (min-width: 37.49999999999999em) {
+  /*
+	Mobile Wide CSS
+*/
+  #leftColumn {
+    width: 37.49999999999999em;
+    display: block;
+  }
+  #centerColumn {
+    width: 37.49999999999999em;
+    display: block;
+  }
+  #rightColumn {
+    width: 37.49999999999999em;
+    display: none;
+  }
+}
+/*
+	Tablet layout 
+	600-911 px
+	Zoomed in above 600 px
+*/
+@media screen and (min-width: 50em) {
+  /*
+	Tablet CSS
+*/
+  #leftColumn {
+    width: 7.833333333333334em;
+    float: left;
+    display: block;
+  }
+  #centerColumn {
+    width: 33.13333333333333em;
+    margin-left: 0.6000000000000001em;
+    float: left;
+    display: block;
+  }
+  #rightColumn {
+    width: 7.833333333333334em;
+    margin-left: 0.6000000000000001em;
+    float: left;
+    display: block;
+  }
+}
+/*
+	desktop layout 
+	912-infinity px
+
+*/
+@media screen and (min-width: 70.234375em) {
+  /*
+	Desktop CSS
+*/
+  #leftColumn {
+    width: 11.080729166666666em;
+    float: left;
+    display: block;
+  }
+  #centerColumn {
+    width: 46.572916666666664em;
+    margin-left: 0.75em;
+    float: left;
+    display: block;
+  }
+  #rightColumn {
+    width: 11.080729166666666em;
+    margin-left: 0.75em;
+    float: left;
+    display: block;
+  }
+}
+/*
+        Style overrides for IE6-8
+        http://jonikorpi.com/leaving-old-IE-behind/
+*/
+/*
+        An easy way to zoom your entire layout in or out (as long as it's set in ems).
+        Just change the media queries to activate them.
+        Assuming your base font-size is 16:
+        - the first one zooms out by a factor of (16-2)/16 = 0.875
+        - the second one zooms in by a factor of (16+2)/16 = 1.125  
+*/
+@media screen and (max-width: 1px) {
+  body {
+    font-size: 0.875em;
+  }
+}
+@media screen and (max-width: 1px) {
+  body {
+    font-size: 1.125em;
+  }
+}
