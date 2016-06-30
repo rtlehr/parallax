@@ -10,23 +10,47 @@
     
 Parallax = function(game)
 {
+  
+    /**
+		* Holds the instance of the game
+		* 
+		* @property game
+		* @type {Class}
+		*/
+  
     this.game = game;
     
-    //Holds the images to use
+    /**
+		* Holds the images to use
+		* 
+		* @property paraImages
+		* @type {Array}
+		*/
+  
     this.paraImages = [];
     
-    //Holds the width of the image
+    /**
+		* Holds the width of the images
+		* 
+		* @property imageWidth
+		* @type {Array}
+		*/
+  
     this.imageWidth = [];
     
-    //Holds the image that is the benchmark
-    this.bench;
-    
-    //Holds the adjusted speed for the image
-    this.sA = [];
+    /**
+		* Holds the width of the image used as the benchmark
+		* 
+		* @property bench
+		* @type {Number}
+		*/
+  
+    this.bench = 0;
+
 }
 
 Parallax.prototype = 
-{
+{}
     /**
     * Add an image to the parallax
     *
@@ -35,7 +59,7 @@ Parallax.prototype =
     * @isBench {bool} Tells function to use this image as the benchmark
     * @pref {Object} Preferences for the Parallax
     */
-    add: function(image, isBench, pref)
+    Parallax.prototype.add = function(image, isBench, pref)
     {
         //Preferences for the joystic
         this.pref= pref;
@@ -87,30 +111,28 @@ Parallax.prototype =
             this.bench = this.imageWidth[this.imageWidth.length-1];
         }
         
-    },
-    create: function()
-    {
-    },
+    }
+    
+    //Parallax.prototype.create = function()
+    //{}
+    
     /**
     * Move the images on the X access
     *
     * @method update
     * @speed {int} amount to move the images
     */
-    update: function()
+    
+    Parallax.prototype.update = function()
     {
-            for(count=0;count<this.paraImages.length;count++)
-            {
-                v = ((this.imageWidth[count] - this.game.camera.width)/(this.bench-this.game.camera.width));
-                                
-                this.paraImages[count].cameraOffset.x = (-1*this.game.camera.x) * v;
-                                
-            }
-    },
-    getBench: function()
-    {
-        return this.benchImage;
+      for(count=0;count<this.paraImages.length;count++)
+      {
+        
+          v = ((this.imageWidth[count] - this.game.camera.width)/(this.bench-this.game.camera.width));
+
+          this.paraImages[count].cameraOffset.x = (-1*this.game.camera.x) * v;
+
+      }
     }
-}
 
 })();
