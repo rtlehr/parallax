@@ -4,7 +4,7 @@ var game = new Phaser.Game(1024, 672, Phaser.CANVAS, 'phaser-example',{ preload:
     	{
 		
 		this.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
-		
+				
 		this.scale.minWidth = 480;                                                                                                                      
 		this.scale.minHeight = 260;
 		this.scale.maxWidth = 1024;
@@ -13,7 +13,7 @@ var game = new Phaser.Game(1024, 672, Phaser.CANVAS, 'phaser-example',{ preload:
 		this.scale.pageAlignHorizontally = true;
 		this.scale.pageAlignVertically = true;
 		
-		this.scale.setScreenSize(true);
+		//this.scale.setScreenSize(true);
 		
 		this.stage.forcePortrait = false;
 		this.stage.backgroundColor = '#111111';
